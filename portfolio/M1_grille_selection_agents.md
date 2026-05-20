@@ -4,61 +4,79 @@
 > et **Microsoft Copilot 365** (productivité) sur 5 critères, pour **deux contextes** :
 > une PME de 50 employés et une grande entreprise de 500+ employés.
 > Concluez par une **recommandation argumentée par contexte**.
->
+> 
 > Exportez en PDF et déposez `M1_grille_selection_agents.pdf` dans ce dossier.
 > Mettez à jour `ai-usage.md` à la racine du dépôt (obligatoire, même si « Aucun »).
 
----
+-----
 
 ## Contexte 1 — PME de 50 employés
 
-_(Décrivez brièvement la PME : secteur, maturité numérique, budget IA approximatif, équipe IT.)_
+**LogiSphere inc.** — PME SaaS de gestion logistique, Sherbrooke (QC), fondée en 2019.
+50 employés : 18 développeurs, 10 reps commerciaux, 8 service client, 14 admin/opérations.
+Aucun CFO dédié (fondateur assume le rôle). Équipe IT : 2 personnes. Aucun admin CRM interne.
+Systèmes en place : Microsoft 365 Business Standard, HubSpot CRM (gratuit), QuickBooks Online.
+Revenu annuel ~4 M$. **Budget IA estimé : 15 000–20 000 $/an.** Contrainte Loi 25 applicable.
 
-| Critère | Brex | Salesforce Einstein | Microsoft Copilot 365 |
-|---|---|---|---|
-| **1. Rôle spécialisé orchestré** _(nommez le spécialiste que l'agent remplace/augmente)_ | | | |
-| **2. Impact d'affaires** _(1-5 + justification en 1 phrase)_ | | | |
-| **3. Faisabilité PME** _(1-5 + données, compétences, intégration)_ | | | |
-| **4. Coût estimé** _(ordre de grandeur annuel + TCO si pertinent)_ | | | |
-| **5. Risque principal** _(et mitigation concrète)_ | | | |
+|Critère                                                                                 |Brex                                                                                                                                                                                                                                   |Salesforce Einstein                                                                                                                                                                                                                                   |Microsoft Copilot 365                                                                                                                                                                                                                                       |
+|----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|**1. Rôle spécialisé orchestré** *(nommez le spécialiste que l’agent remplace/augmente)*|**Contrôleur financier junior** — catégorise les dépenses, détecte les anomalies budgétaires et génère les rapports de clôture. Remplace un rôle inexistant chez LogiSphere.                                                           |**Analyste CRM / Sales Ops** — score les leads, priorise le pipeline et recommande la prochaine action commerciale. Remplace une ressource HubSpot que la PME n’a pas les moyens d’embaucher.                                                         |**Assistant de productivité transversal** — augmente chaque employé sur la rédaction, les résumés de réunions et l’analyse de données. Remplace des heures perdues en tâches répétitives à l’échelle des 50 employés.                                       |
+|**2. Impact d’affaires** *(1-5 + justification en 1 phrase)*                            |**4/5** — Élimine ~40 h/semaine de réconciliation manuelle (benchmark Brex 2025, Dude Wipes) et libère le fondateur pour des décisions stratégiques.                                                                                   |**3/5** — Impact potentiel fort (+25 % conversion, Salesforce State of Sales 2024), mais conditionnel à une migration depuis HubSpot vers Salesforce, ce qui représente un projet de 6+ mois hors de portée actuelle.                                 |**4/5** — Impact immédiat sur les 50 employés ; Forrester TEI (mars 2025) estime 9 h/user/mois économisées, soit ~450 h/mois récupérées à l’échelle de LogiSphere.                                                                                          |
+|**3. Faisabilité PME** *(1-5 + données, compétences, intégration)*                      |**5/5** — Onboarding < 24 h, plan Essentials gratuit, sync natif QuickBooks Online déjà en place, aucune compétence IT spécialisée requise.                                                                                            |**2/5** — Nécessite migration de HubSpot vers Salesforce, minimum 1 000 opportunités CRM pour que le scoring soit fiable, et un admin Salesforce dédié ($80–100 K/an) inexistant dans l’organisation.                                                 |**5/5** — Microsoft 365 Business Standard déjà en place ; add-on Copilot Business à $18/user/mois, activation immédiate, aucune migration requise, aucun prérequis technique supplémentaire.                                                                |
+|**4. Coût estimé** *(ordre de grandeur annuel + TCO si pertinent)*                      |**$0–7 200/an** — Plan Essentials gratuit pour démarrer ; Premium : 50 × $12 = $7 200/an. Pas de frais d’implémentation significatifs. TCO 3 ans : ~$18 000 maximum.                                                                   |**$80 000–$150 000/an** — Licences Salesforce Enterprise ($165/user) + services d’implémentation ($30–50 K) + admin dédié ($80–100 K/an). Totalement hors budget PME.                                                                                 |**$10 800/an** — 50 × $18 × 12 = $10 800/an (tarif promo jusqu’en juin 2026, ensuite $12 600/an). Prérequis M365 déjà payé, aucun coût additionnel d’infrastructure.                                                                                        |
+|**5. Risque principal** *(et mitigation concrète)*                                      |**Acquisition Capital One (janv. 2026)** — Incertitude sur l’évolution de la tarification et du produit post-acquisition à 5,15 G$. Mitigation : clause de sortie annuelle dans le contrat, évaluer Mercury comme solution de rechange.|**Surdimensionnement + données insuffisantes** — 77 % des déploiements B2B Agentforce/Einstein échouent en raison de données CRM pauvres (Clientell, avril 2026). Mitigation : exclure cet outil — les prérequis ne sont pas remplis dans ce contexte.|**Adoption faible sans stratégie** — 30–40 % des licences se retrouvent inutilisées dans les 90 premiers jours si déployé sans cas d’usage définis (EPC Group, 2026). Mitigation : démarrer avec 10 utilisateurs pilotes sur des cas précis avant de scaler.|
 
 ### Recommandation pour la PME
 
-_(2-3 phrases : quelle solution déployer en premier, et pourquoi ce choix bat les deux autres dans CE contexte.)_
+**Déployer Brex en priorité (score pondéré : 4,30/5), Copilot 365 en second (4,25/5), Einstein exclu.**
 
----
+Brex comble un vide structurel critique chez LogiSphere — l’absence de CFO — avec une faisabilité maximale (onboarding < 24 h, plan gratuit, sync QuickBooks natif) et un coût nul à l’entrée, ce qu’aucun autre outil ne peut égaler dans ce contexte budgétaire. Microsoft Copilot 365 constitue le déploiement naturel en phase 2, car M365 est déjà en place et les 450 h/mois récupérées collectivement représentent un ROI mesurable dès le trimestre 1. Salesforce Einstein est explicitement exclu : sans CRM propre, sans admin dédié et à plus de $80 000/an minimum, le déployer dans ce contexte serait une erreur de surdimensionnement qui conduirait à l’échec documenté à 77 %.
 
-## Contexte 2 — Grande entreprise de 500+ employés
+-----
 
-_(Décrivez brièvement : secteur, systèmes existants — ERP/CRM, contraintes de gouvernance, sponsor.)_
+## Contexte 2 — Grande entreprise de 600 employés
 
-| Critère | Brex | Salesforce Einstein | Microsoft Copilot 365 |
-|---|---|---|---|
-| **1. Rôle spécialisé orchestré** | | | |
-| **2. Impact d'affaires** _(1-5 + justification)_ | | | |
-| **3. Faisabilité grande entreprise** _(1-5 + intégration systèmes, gouvernance)_ | | | |
-| **4. Coût estimé** _(licences + intégration + formation)_ | | | |
-| **5. Risque principal** _(et mitigation)_ | | | |
+**Groupe Boréal Immobilier inc.** — Promoteur et gestionnaire immobilier commercial, Montréal (QC), fondé en 1998.
+600 employés : 80 en développement de projets, 120 en ventes/location, 150 en construction, 100 en gestion de propriétés, 150 en admin/finance/RH.
+Systèmes existants : ERP SAP S/4HANA, Salesforce Professional (CRM ventes), Microsoft 365 E3.
+CFO en poste depuis 2015. Équipe IT : 12 personnes. Admin Salesforce interne disponible.
+**Budget IA approuvé : 250 000–350 000 $/an.** Contraintes : Loi 25, données locataires sensibles, gouvernance stricte des contrats.
+
+|Critère                                                                         |Brex                                                                                                                                                                                                                                |Salesforce Einstein                                                                                                                                                                                                                                                          |Microsoft Copilot 365                                                                                                                                                                                                                              |
+|--------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|**1. Rôle spécialisé orchestré**                                                |**Analyste finances opérationnelles** — automatise la réconciliation multi-entités, détecte les anomalies fournisseurs et génère les rapports de clôture. Augmente l’équipe finance sans remplacer le CFO en poste.                 |**Directeur commercial data-driven** — orchestre les 120 reps ventes/location avec scoring prédictif, pipeline forecasting et coaching automatisé. Remplace une ressource Sales Ops senior inexistante.                                                                      |**Assistant de productivité transversal** — augmente les 600 knowledge workers sur la rédaction de contrats, les résumés de réunions et l’analyse de données. Applicable à toutes les équipes sans distinction.                                    |
+|**2. Impact d’affaires** *(1-5 + justification)*                                |**3/5** — CFO et équipe finance déjà en place réduisent l’impact marginal. Valeur réelle dans la réconciliation multi-entités et la détection de fraude fournisseurs (risque élevé en construction), mais non critique.             |**5/5** — Salesforce déjà déployé avec 5+ ans de données CRM. Scoring prédictif sur 120 reps actifs : impact mesuré de +25–35 % sur les taux de conversion (Salesforce State of Sales 2024). ROI direct et quantifiable sur les revenus.                                     |**4/5** — Microsoft 365 E3 déjà déployé sur 600 employés. Forrester (2025) : 9 h/user/mois = 5 400 h/mois récupérées à l’échelle de Boréal. Fort potentiel productivité transversal sur toutes les équipes.                                        |
+|**3. Faisabilité grande entreprise** *(1-5 + intégration systèmes, gouvernance)*|**3/5** — SAP S/4HANA en place crée une complexité d’intégration réelle : pas de sync natif SAP-Brex, nécessite API custom ou connecteur tiers. L’équipe IT peut gérer, mais délai estimé de 3–6 mois.                              |**4/5** — Salesforce Professional déjà en place ; upgrade vers Enterprise requis ($165/user) mais faisable dans l’enveloppe budget. Données CRM 5+ ans disponibles — prérequis données rempli. Admin Salesforce interne opérationnel.                                        |**5/5** — Microsoft 365 E3 déjà déployé sur l’ensemble des 600 employés. Add-on Copilot Enterprise à $30/user/mois, activation possible en 48 h après audit des permissions SharePoint. Aucune migration. Équipe IT compétente.                    |
+|**4. Coût estimé** *(licences + intégration + formation)*                       |**$50 000–$100 000/an** — Enterprise sur devis (~$20/user pour 100 utilisateurs finance = $24 000/an) + intégration SAP ($20–50 K an 1) + maintenance. TCO 3 ans : ~$180 000. Dans l’enveloppe budget.                              |**$180 000–$300 000/an** — Upgrade Salesforce Enterprise (120 users × $165 × 12 = $237 600/an) + services d’implémentation ($30–50 K) + formation. Dans l’enveloppe budget approuvé de $250–350 K.                                                                           |**$216 000/an** — 600 × $30 × 12 = $216 000/an. Dans l’enveloppe. Risque : 30 % de licences inutilisées an 1 sans stratégie d’adoption = $64 800 gaspillés. Déploiement phasé par département recommandé.                                          |
+|**5. Risque principal** *(et mitigation)*                                       |**Intégration SAP complexe + incertitude Capital One** — Risque technique réel d’intégration. Mitigation : proof of concept 90 jours limité au département finance avant engagement complet ; budgéter le connecteur SAP séparément.|**Qualité des données CRM + 77 % d’échecs documentés** — Salesforce Professional souvent mal entretenu. Mitigation : audit CRM obligatoire avant déploiement Einstein ; nettoyer doublons et champs vides ; valider le volume d’historique (min. 1 000 opportunités fermées).|**Oversharing de données sensibles (Loi 25)** — SharePoint mal configuré expose des contrats confidentiels et données locataires. Mitigation : audit Microsoft Purview + SharePoint Advanced Management obligatoire avant toute activation Copilot.|
 
 ### Recommandation pour la grande entreprise
 
-_(2-3 phrases : quelle solution, et pourquoi le choix diffère — ou ne diffère pas — de la PME.)_
+**Déployer Copilot 365 en priorité (score pondéré : 4,05/5), Einstein en second (3,85/5), Brex en phase 3 (3,25/5).**
 
----
+Microsoft Copilot 365 est le premier déploiement optimal chez Boréal car M365 E3 est déjà en place sur les 600 employés — l’activation est immédiate et l’impact transversal génère un ROI mesurable dès le trimestre 1 (5 400 h/mois récupérées estimées). L’audit SharePoint-Purview préalable est obligatoire pour mitiger le risque Loi 25 sur les données locataires et contrats. Salesforce Einstein constitue le second déploiement stratégique : avec Salesforce déjà déployé et 120 reps actifs, le scoring prédictif sur pipeline existant génère un impact direct sur les revenus, mais nécessite un audit CRM préalable pour valider la qualité des données avant de commencer — sans quoi on entre dans les 77 % d’échecs documentés.
+
+-----
 
 ## Synthèse — ce que la grille révèle
 
-_(3-5 phrases : quel critère a fait basculer la décision ? Qu'est-ce que ça enseigne sur la sélection de solutions IA en général ? Préparation directe à l'Examen-cas 1.)_
+La **faisabilité** a été le critère décisif dans les deux contextes, mais pour des raisons opposées. Chez LogiSphere (PME), c’est l’absence de prérequis techniques qui a propulsé Brex au sommet (plan gratuit, sync QBO natif, onboarding < 24 h) et qui a exclu Einstein aussi complètement que son prix hors budget. Chez Boréal (GE), c’est la présence du stack existant (M365 E3 sur 600 employés) qui a donné à Copilot un avantage décisif de faisabilité (5/5 vs 4/5 pour Einstein) — sans ce prérequis déjà rempli, le classement aurait été différent.
 
----
+Le cas d’Einstein illustre parfaitement le principe central du cours : un même agent passe de 1,85/5 (PME) à 3,85/5 (GE) non pas parce que l’outil change, mais parce que les prérequis organisationnels changent. La puissance technique d’Einstein est identique dans les deux contextes — c’est le contexte qui détermine si cette puissance est accessible et utile.
+
+La Loi 25 n’est pas un critère formel à cocher — c’est un risque opérationnel concret dans les deux contextes : scan Gmail de Brex (données d’employés), données CRM clients dans Einstein Trust Layer, et oversharing SharePoint avec Copilot. Ces risques ne disqualifient aucun outil, mais imposent des étapes de mitigation avant déploiement qui doivent être budgétées.
+
+Enseignement pour l’Examen-cas 1 : avant d’évaluer un agent IA, il faut définir le contexte (taille, stack, budget, contraintes réglementaires). Sans contexte explicite, un score est sans valeur — c’est une intuition, pas une décision défendable devant un comité de direction.
+
+-----
 
 ## Liste de contrôle de remise
 
-- [ ] Les 3 agents sont comparés sur les mêmes 5 critères dans les deux contextes
-- [ ] Le rôle spécialisé orchestré est nommé précisément pour chaque agent
-- [ ] Les scores sont justifiés (pas juste des chiffres)
-- [ ] La recommandation diffère — ou est explicitement justifiée comme identique — entre PME et grande entreprise
-- [ ] Le contexte d'une organisation québécoise est pris en compte (Loi 25, marché local, talent)
-- [ ] `ai-usage.md` mis à jour à la racine du dépôt
+- [x] Les 3 agents sont comparés sur les mêmes 5 critères dans les deux contextes
+- [x] Le rôle spécialisé orchestré est nommé précisément pour chaque agent
+- [x] Les scores sont justifiés (pas juste des chiffres)
+- [x] La recommandation diffère — ou est explicitement justifiée comme identique — entre PME et grande entreprise
+- [x] Le contexte d’une organisation québécoise est pris en compte (Loi 25, marché local, talent)
+- [x] `ai-usage.md` mis à jour à la racine du dépôt
 
-> **Crédit :** Jalon M1 — pass/fail (1,5 % du cours). Préparation directe à l'**Examen-cas 1** (S05, 25 %).
+> **Crédit :** Jalon M1 — pass/fail (1,5 % du cours). Préparation directe à l’**Examen-cas 1** (S05, 25 %).
